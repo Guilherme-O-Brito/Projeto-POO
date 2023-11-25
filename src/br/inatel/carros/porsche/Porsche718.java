@@ -15,9 +15,12 @@ public class Porsche718 extends Carro implements Configurador{
 
     }
 
-    public void mostraInfo(){
-        super.mostraInfo();
-        
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo(); // Chama o método da classe pai para exibir informações comuns a todos os carros
+        System.out.println("Farol: " + farol);
+        System.out.println("Bancos: " + bancos);
+        System.out.println("Teto: " + teto);
     }
 
     @Override

@@ -15,8 +15,12 @@ public class BMWX6 extends Carro implements Configurador {
 
     }
 
-    public void mostraInfo(){
-        
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo(); // Chama o método da classe pai para exibir informações comuns a todos os carros
+        System.out.println("Teto: " + teto);
+        System.out.println("Híbrido: " + (hibrido ? "Sim" : "Não"));
+        System.out.println("Rodas: " + rodas);
     }
 
     @Override

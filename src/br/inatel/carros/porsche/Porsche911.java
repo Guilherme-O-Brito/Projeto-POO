@@ -9,15 +9,20 @@ public class Porsche911 extends Carro implements Configurador{
     private String farol;
     private String bancos;
     private String aerofolio;
-    private String suspencao;
+    private String suspensao;
 
     // Metodos
     public Porsche911(){
 
     }
 
-    public void mostraInfo(){
-        
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo(); // Chama o método da classe pai para exibir informações comuns a todos os carros
+        System.out.println("Farol: " + farol);
+        System.out.println("Bancos: " + bancos);
+        System.out.println("Aerofólio: " + aerofolio);
+        System.out.println("Suspensão: " + suspensao);
     }
 
     @Override
