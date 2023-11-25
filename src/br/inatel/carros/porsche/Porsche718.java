@@ -31,7 +31,7 @@ public class Porsche718 extends Carro implements Configurador{
     @Override
     public void configurador() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Configurando Porsche 718 " + modelo);
+        System.out.println("Configurando Porsche " + modelo);
         System.out.println("Selecione uma das opcoes de farol: ");
         System.out.println("1 - Farol convencional : custo R$0");
         System.out.println("2 - Farol Xenon        : Custo R$3.700");
@@ -78,7 +78,7 @@ public class Porsche718 extends Carro implements Configurador{
 
         }
 
-        System.out.println("Selecione uma das opcoes de bancosteto: ");
+        System.out.println("Selecione uma das opcoes de teto: ");
         System.out.println("1 - Teto convencional             : custo R$0");
         System.out.println("2 - Teto Solar                    : Custo R$8.000");
 
