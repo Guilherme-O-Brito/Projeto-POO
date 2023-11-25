@@ -36,7 +36,8 @@ public abstract class Carro {
         System.out.println("Montadora: " + montadora);
         System.out.println("Modelo: " + modelo);
         System.out.println("Cor Interior: " + corInterior);
-        System.out.println("Motor: " + motor);
+        System.out.println("Motor: ");
+        motor.mostraInfo();
         System.out.println("Velocidade Máxima: " + velocidadeMaxima);
         System.out.println("Tração: " + tracao);
         System.out.println("Cor: " + cor);

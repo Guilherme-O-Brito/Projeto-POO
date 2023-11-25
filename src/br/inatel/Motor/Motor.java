@@ -18,5 +18,14 @@ public class Motor {
         this.combustivel = combustivel;
     }
 
+    // Metodos
+    public void mostraInfo(){
+        System.out.println("Cilindros: "+cilindros);
+        System.out.println("Tipo: "+tipo);
+        System.out.println("Potencia: "+potencia);
+        System.out.println("Torque: "+torque);
+        System.out.println("Combustivel: "+combustivel);
+    }
+
     
 }
