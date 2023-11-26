@@ -13,12 +13,21 @@ public class BMWX6 extends Carro implements Configurador {
     private boolean hibrido;
     private String rodas;
 
-    // Metodos
-    public BMWX6(String modelo, String corInterior, Motor motor, float velocidadeMaxima, String tracao, String cor, 
-                 float preco, String chassi, String cambio, int ano){
-        super("BMW", modelo, corInterior, motor, velocidadeMaxima, tracao, cor, preco, chassi, cambio, ano);
+    // Construtor para compra pelo metodo configurador
+    public BMWX6(){
+        super("BMW");
     }
 
+    // Construtor quando le do arquivo
+    public BMWX6(String modelo, String corInterior, Motor motor, float velocidadeMaxima, String tracao, String cor, 
+                 float preco, String chassi, String cambio, int ano, String teto, boolean hibrido, String rodas){
+        super("BMW", modelo, corInterior, motor, velocidadeMaxima, tracao, cor, preco, chassi, cambio, ano);
+        this.teto = teto;
+        this.hibrido = hibrido;
+        this.rodas = rodas;
+    }
+
+    // Metodos
     @Override
     public void mostraInfo() {
         super.mostraInfo(); // Chama o método da classe pai para exibir informações comuns a todos os carros
@@ -30,8 +39,68 @@ public class BMWX6 extends Carro implements Configurador {
     @Override
     public void configurador() {
         
-        Scanner input = new Scanner(System.in);
-        System.out.println("Configurando BMW X6 " + modelo);
+        Scanner input = new Scanner(System.in); //input nunca eh fechado devida a isso causar um bug nas leituras da main
+        System.out.println("Selecione um modelo da BMW M2: ");
+        System.out.println("1 - BMW X6                  : custo R$700.000");
+        System.out.println("2 - BMW X6M Competition     : Custo R$1.015.000");
+
+        switch(input.nextInt()) {
+            
+            case 1:
+                this.modelo = "BMW X6";
+                this.motor = new Motor(6, "Inline", 340, 45.9f, "Gasolina");
+                this.velocidadeMaxima = 250;
+                this.tracao = "AWD - xDrive";
+                this.preco = 700000;
+                this.chassi = "SUV";
+                this.cambio = "Automatico ZF8HP";
+                this.ano = 2022;
+                System.out.println("BMW X6 selecionado!");
+                break;
+
+            case 2:
+                this.modelo = "BMW X6M Competition";
+                this.motor = new Motor(8, "Motor em V", 625, 76.5f, "Gasolina");
+                this.velocidadeMaxima = 290;
+                this.tracao = "AWD - xDrive";
+                this.preco = 1015000;
+                this.chassi = "SUV";
+                this.cambio = "Automatico ZF8HP";
+                this.ano = 2022;
+                System.out.println("BMW X6M Competition selecionado!");
+                break;
+
+            default:
+                System.out.println("Opcao invalida!!! Cancelando compra!!!");
+                return;
+
+        }
+
+        System.out.println("Selecione uma das opcoes de cor ");
+        System.out.println("1 - Branco com interior Caramelo           : custo R$0");
+        System.out.println("2 - Azul com interior Preto        : Custo R$0");
+
+        switch(input.nextInt()) {
+            
+            case 1:
+                this.cor = "Branco";
+                this.corInterior = "Caramelo";
+                System.out.println("Branco com interior Caramelo selecionado!");
+                break;
+
+            case 2:
+                this.cor = "Azul";
+                this.corInterior = "Preto";
+                System.out.println("Azul com interior Preto selecionado!");
+                break;
+
+            default:
+                System.out.println("Opcao invalida!!! Selecionando opcao padrao: Branco com interior Caramelo");
+                this.cor = "Branco";
+                this.corInterior = "Caramelo";
+        }
+
+        System.out.println("Configurando BMW X6");
         System.out.println("Selecione uma das opcoes de teto: ");
         System.out.println("1 - Teto convencional             : custo R$0");
         System.out.println("2 - Teto Solar                    : Custo R$8.000");
@@ -101,21 +170,6 @@ public class BMWX6 extends Carro implements Configurador {
 
         }
 
-        input.close();
-
-    }
-    
-    // Setters
-    public void setTeto(String teto){
-        this.teto = teto;
-    }
-
-    public void setHibrido(boolean hibrido){
-        this.hibrido = hibrido;
-    }
-
-    public void setRodas(String rodas){
-        this.rodas = rodas;
     }
 
 }
