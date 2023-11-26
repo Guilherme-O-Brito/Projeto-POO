@@ -15,11 +15,8 @@ public class BMWX6 extends Carro implements Configurador {
 
     // Metodos
     public BMWX6(String modelo, String corInterior, Motor motor, float velocidadeMaxima, String tracao, String cor, 
-                 float preco, String chassi, String cambio, int ano, String teto, boolean hibrido, String rodas){
+                 float preco, String chassi, String cambio, int ano){
         super("BMW", modelo, corInterior, motor, velocidadeMaxima, tracao, cor, preco, chassi, cambio, ano);
-        this.teto = teto;
-        this.hibrido = hibrido;
-        this.rodas = rodas;
     }
 
     @Override
