@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import br.inatel.Comprador;
+import br.inatel.Utils.Arquivo;
 import br.inatel.Utils.ClearScreen;
 import br.inatel.carros.BMW.BMWM2;
 import br.inatel.carros.BMW.BMWX6;
@@ -13,6 +14,7 @@ import br.inatel.carros.porsche.Porsche911;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         
+        //Variaveis para entrada de dados
         Scanner input = new Scanner(System.in);
         int opcao;
         String pause;
@@ -20,14 +22,13 @@ public class Main {
         String nome;
         String cpf;
         int idade;
-
         // Variavel auxiliar para operacoes com os compradores
         Comprador comprador;
-
+        // Mapa de compradores da loja cuja chave eh o cpf de cada comprador em string
         Map <String, Comprador> compradores = new HashMap<>();
-
-        // TESTE
-        compradores.put("1", new Comprador("Guilherme", "1", 20));
+        // Configura nome do arquivo de banco de dados e le o mesmo
+        Arquivo.setArquivo("Banco.txt");
+        Arquivo.read(compradores);
 
         // Menu de interacao com o ususario
         do{
@@ -130,6 +131,8 @@ public class Main {
             }
 
         }while(opcao != 0);
+
+        Arquivo.save(compradores);
 
         input.close();
     }

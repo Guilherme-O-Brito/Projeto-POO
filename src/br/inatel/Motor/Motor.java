@@ -20,12 +20,19 @@ public class Motor {
 
     // Metodos
     public void mostraInfo(){
-        System.out.println("Cilindros: "+cilindros);
-        System.out.println("Tipo: "+tipo);
-        System.out.println("Potencia: "+potencia);
-        System.out.println("Torque: "+torque);
-        System.out.println("Combustivel: "+combustivel);
+        System.out.println("Cilindros: " + cilindros);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Potencia: " + potencia + "Hp");
+        System.out.println("Torque: " + torque + "kgfm");
+        System.out.println("Combustivel: " + combustivel);
     }
 
+    public String toString(){
+        return "\nCilindros:"+cilindros+
+               "\nTipo:"+tipo+
+               "\nPotencia:"+potencia+
+               "\nTorque:"+torque+
+               "\nCombustivel:"+combustivel;
+    }
     
 }

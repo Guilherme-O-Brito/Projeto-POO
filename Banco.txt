@@ -1,0 +1,149 @@
+:Comprador
+Nome:Guilherme
+CPF:1
+Idade:20
+:911
+Montadora:Porsche
+Modelo:911 GT3 RS
+Cor Interior:preto
+Cilindros:6
+Tipo:Boxter
+Potencia:525
+Torque:46.5
+Combustivel:Gasolina/Etanol
+Velocidade Máxima:296.0
+Tração:Traseira
+Cor:Branco
+Preço:2121700.0
+Chassi:Coupe
+Câmbio:Automatico PDK
+Ano:2024
+Farol:Farol Xenon
+Bancos:Bancos Concha de corrida
+Aerofólio:Aerofolio com tecnologia DRS de Formula 1
+Suspensão:Suspensao coilover de corrida
+:718
+Montadora:Porsche
+Modelo:718 Cayman
+Cor Interior:Vermelho
+Cilindros:4
+Tipo:Boxter
+Potencia:300
+Torque:38.0
+Combustivel:Gasolina/Etanol
+Velocidade Máxima:275.0
+Tração:Traseira
+Cor:Branco
+Preço:535000.0
+Chassi:Coupe
+Câmbio:Automatico PDK
+Ano:2024
+Farol:Farol convencional
+Bancos:Bancos convencionais
+Teto:Teto convencional
+:M2
+Montadora:BMW
+Modelo:BMW M2 Competition
+Cor Interior:Caramelo
+Cilindros:6
+Tipo:Inline
+Potencia:410
+Torque:56.0
+Combustivel:Gasolina
+Velocidade Máxima:280.0
+Tração:Traseira
+Cor:Branco
+Preço:519781.0
+Chassi:Coupe
+Câmbio:Automatico Dupla Embreagem
+Ano:2020
+Suspensão:Suspensao coilover de corrida
+Teto:Teto convencional
+Rodas:Rodas Esportivas BMW
+Aerofólio:Aerofolio Esportivo BMW
+:X6
+Montadora:BMW
+Modelo:BMW X6
+Cor Interior:Preto
+Cilindros:6
+Tipo:Inline
+Potencia:340
+Torque:45.9
+Combustivel:Gasolina
+Velocidade Máxima:250.0
+Tração:AWD - xDrive
+Cor:Azul
+Preço:700000.0
+Chassi:SUV
+Câmbio:Automatico ZF8HP
+Ano:2022
+Teto:Teto convencional
+Hibrido:false
+Rodas:Rodas convencionais
+:Comprador
+Nome:Alessandro 
+CPF:2
+Idade:19
+:911
+Montadora:Porsche
+Modelo:911 GT3 RS
+Cor Interior:Caramelo
+Cilindros:6
+Tipo:Boxter
+Potencia:525
+Torque:46.5
+Combustivel:Gasolina/Etanol
+Velocidade Máxima:296.0
+Tração:Traseira
+Cor:Verde
+Preço:1923700.0
+Chassi:Coupe
+Câmbio:Automatico PDK
+Ano:2024
+Farol:Farol Xenon
+Bancos:Bancos convencionais
+Aerofólio:Aerofolio convencional
+Suspensão:Suspensao convencional
+:M2
+Montadora:BMW
+Modelo:BMW M2 CS
+Cor Interior:Caramelo
+Cilindros:6
+Tipo:Inline
+Potencia:450
+Torque:46.5
+Combustivel:Gasolina
+Velocidade Máxima:280.0
+Tração:Traseira
+Cor:Branco
+Preço:871500.0
+Chassi:Coupe
+Câmbio:Manual 6 Marchas
+Ano:2021
+Suspensão:Suspensao coilover de corrida
+Teto:Teto Solar
+Rodas:Rodas Esportivas BMW
+Aerofólio:Aerofolio convencional
+:Comprador
+Nome:Alex
+CPF:3
+Idade:18
+:X6
+Montadora:BMW
+Modelo:BMW X6
+Cor Interior:Preto
+Cilindros:6
+Tipo:Inline
+Potencia:340
+Torque:45.9
+Combustivel:Gasolina
+Velocidade Máxima:250.0
+Tração:AWD - xDrive
+Cor:Azul
+Preço:700000.0
+Chassi:SUV
+Câmbio:Automatico ZF8HP
+Ano:2022
+Teto:Teto convencional
+Hibrido:false
+Rodas:Rodas convencionais

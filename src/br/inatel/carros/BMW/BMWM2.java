@@ -41,6 +41,16 @@ public class BMWM2 extends Carro implements Configurador {
     }
 
     @Override
+    public String toString(){
+        return ":M2" +
+               "\n"+ super.toString() +
+               "\nSuspensão:" + suspensao +
+               "\nTeto:" + teto +
+               "\nRodas:" + rodas +
+               "\nAerofólio:" + aerofolio;
+    }
+
+    @Override
     public void configurador() {
         
         Scanner input = new Scanner(System.in); //input nunca eh fechado devida a isso causar um bug nas leituras da main

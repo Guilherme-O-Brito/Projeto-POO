@@ -32,8 +32,17 @@ public class BMWX6 extends Carro implements Configurador {
     public void mostraInfo() {
         super.mostraInfo(); // Chama o método da classe pai para exibir informações comuns a todos os carros
         System.out.println("Teto: " + teto);
-        System.out.println("Híbrido: " + (hibrido ? "Sim" : "Não"));
+        System.out.println("Hibrido: " + (hibrido ? "Sim" : "Não"));
         System.out.println("Rodas: " + rodas);
+    }
+
+    @Override
+    public String toString(){
+        return ":X6" +
+               "\n" + super.toString() +
+               "\nTeto:" + teto +
+               "\nHibrido:" + hibrido +
+               "\nRodas:" + rodas;
     }
 
     @Override
@@ -147,7 +156,7 @@ public class BMWX6 extends Carro implements Configurador {
 
         }
         
-        System.out.println("Selecione uma das opcoes de teto: ");
+        System.out.println("Selecione uma das opcoes de Rodas: ");
         System.out.println("1 - Rodas convencionais             : custo R$0");
         System.out.println("2 - Rodas Esportivas BMW            : Custo R$5.500");
 

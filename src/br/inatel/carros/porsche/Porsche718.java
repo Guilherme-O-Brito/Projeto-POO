@@ -37,6 +37,15 @@ public class Porsche718 extends Carro implements Configurador{
     }
 
     @Override
+    public String toString(){
+        return ":718" +
+               "\n" + super.toString() +
+               "\nFarol:" + farol +
+               "\nBancos:" + bancos +
+               "\nTeto:" + teto;
+    }
+
+    @Override
     public void configurador() {
         
         Scanner input = new Scanner(System.in); //input nunca eh fechado devida a isso causar um bug nas leituras da main

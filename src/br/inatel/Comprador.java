@@ -68,13 +68,45 @@ public class Comprador {
         }
     }
 
-    // Getters
+    public String toString(){
+
+        String carrosToString = "";
+
+        for (Carro carro : carros) {
+            if(carro instanceof Porsche718){
+                carrosToString += "\n" + ((Porsche718)carro).toString();
+            }
+            if(carro instanceof Porsche911){
+                carrosToString += "\n" + ((Porsche911)carro).toString();
+            }
+            if(carro instanceof BMWM2){
+                carrosToString += "\n" + ((BMWM2)carro).toString();
+            }
+            if(carro instanceof BMWX6){
+                carrosToString += "\n" + ((BMWX6)carro).toString();
+            }
+        }
+
+        return ":Comprador" +
+               "\nNome:" + nome +
+               "\nCPF:" + cpf +
+               "\nIdade:" + idade +
+               carrosToString + "\n";
+    }
+
+    // Getters e setters
     public static int getCarrosComprados(){
         return carrosComprados;
     }
 
     public static float getTotalArrecadado(){
         return totalArrecadado;
+    }
+
+    public void addCarros(Carro carro){
+        carros.add(carro);
+        carrosComprados += 1;
+        totalArrecadado += carro.getPreco();
     }
 
 }

@@ -41,6 +41,16 @@ public class Porsche911 extends Carro implements Configurador{
     }
 
     @Override
+    public String toString(){
+        return ":911" +
+               "\n" + super.toString() +
+               "\nFarol:" + farol +
+               "\nBancos:" + bancos +
+               "\nAerofólio:" + aerofolio +
+               "\nSuspensão:" + suspensao;
+    }
+
+    @Override
     public void configurador() {
         
         Scanner input = new Scanner(System.in); //input nunca eh fechado devida a isso causar um bug nas leituras da main

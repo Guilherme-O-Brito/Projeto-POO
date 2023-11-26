@@ -53,6 +53,20 @@ public abstract class Carro {
         System.out.println("Ano: " + ano);
     }
 
+    public String toString(){
+        return "Montadora:" + montadora +
+               "\nModelo:" + modelo + 
+               "\nCor Interior:" + corInterior +
+               motor.toString() +
+               "\nVelocidade Máxima:" + velocidadeMaxima +
+               "\nTração:" + tracao + 
+               "\nCor:" + cor +
+               "\nPreço:" + preco +
+               "\nChassi:" + chassi +
+               "\nCâmbio:" + cambio +
+               "\nAno:" + ano;
+    }
+
     // Getters
     public float getPreco(){
         return preco;
