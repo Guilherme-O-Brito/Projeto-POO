@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +17,6 @@ import br.inatel.carros.porsche.Porsche911;
 public class Arquivo {
     
     private static Path arquivo;
-    //private static String banco = "";
 
     public static void read(Map <String, Comprador> compradores){
         
@@ -142,29 +140,3 @@ public class Arquivo {
 
 }
 
-
-/*
-Comprador
-Nome: Guilherme
-CPF: 1
-Idade: 20
-:X6
-Montadora:BMW 1
-Modelo:BMW X6 2
-Cor Interior:Preto 3
-Cilindros:6 4
-Tipo:Inline 5
-Potencia:340 6
-Torque:45.9 7 
-Combustivel:Gasolina 8
-Velocidade Máxima:250.0 9
-Tração:AWD - xDrive 10
-Cor:Azul 11
-Preço:700000.0 12
-Chassi:SUV 13
-Câmbio:Automatico ZF8HP 14
-Ano:2022 15
-Teto:Teto convencional 16
-Hibrido:false 17
-Rodas:Rodas convencionais 18
-*/
