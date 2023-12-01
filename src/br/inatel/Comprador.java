@@ -27,6 +27,12 @@ public class Comprador {
     }
 
     // Metodos
+    /**
+     * Este metodo serve para adicionar um carro recebido como parametro na lista de carros do comprador atraves de uma venda
+     * Este identifica o tipo de carro atravez da instancia do carro recebido e chama o seu respectivo configurador para calculo de valores extras do carro
+     * Depois adiciona este carro na lista e soma o total arrecadado pela loja
+     * @param carro
+     */
     public void comprar(Carro carro){
         if(carro instanceof Porsche718){
             ((Porsche718)carro).configurador();
@@ -45,6 +51,9 @@ public class Comprador {
         totalArrecadado += carro.getPreco();
     }
 
+    /**
+     * Mostra na tela todos atributos do comprador incluindo os carros que ele tem comprado seguido de seus atributos
+     */
     public void mostraInfo(){
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
@@ -68,6 +77,15 @@ public class Comprador {
         }
     }
 
+    /**
+     * Este metodo retorna uma String concatenada com todos os atributos presentes no comprador
+     * separados por quebras de linha no padrao:
+     * :Comprador (Indicando que esta no inicio da descricao de um comprador)
+     * Nome:Gui (Primeiro uma string indicando qual atributo esta na linha separando o valor por um :)
+     * cpf:123 
+     * idade:20 
+     * :(Carro comprado) (indica que agora aparecerao os atributos de um dos carros que este comprador comprou seduindo o mesmo padrao de apresentacao dos atributos do comprador)
+     */
     public String toString(){
 
         String carrosToString = "";
@@ -94,6 +112,17 @@ public class Comprador {
                carrosToString + "\n";
     }
 
+    /**
+     * Meio alternativo de adicionar carros na lista de compras de um comprador sem ser atravez do metodo comprar
+     * Utilizado especificamente para adicionar os carros lidos no arquivo no momento inicial do codigo
+     * @param carro
+     */
+    public void addCarros(Carro carro){
+        carros.add(carro);
+        carrosComprados += 1;
+        totalArrecadado += carro.getPreco();
+    }
+
     // Getters e setters
     public static int getCarrosComprados(){
         return carrosComprados;
@@ -103,10 +132,16 @@ public class Comprador {
         return totalArrecadado;
     }
 
-    public void addCarros(Carro carro){
-        carros.add(carro);
-        carrosComprados += 1;
-        totalArrecadado += carro.getPreco();
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public int getIdade() {
+        return idade;
     }
 
 }

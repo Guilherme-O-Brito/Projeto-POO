@@ -16,12 +16,8 @@ public class Main {
         
         //Variaveis para entrada de dados
         Scanner input = new Scanner(System.in);
-        int opcao;
-        String pause;
-        // Variaveis auxiliares para criacao de compradores
-        String nome;
-        String cpf;
-        int idade;
+        int opcao; // Variavei para armazenar as escolhas do usuario no menu
+        String pause; // Variavel apenas para gerar um "Pause" na execucao do codigo
         // Variavel auxiliar para operacoes com os compradores
         Comprador comprador;
         // Mapa de compradores da loja cuja chave eh o cpf de cada comprador em string
@@ -29,14 +25,15 @@ public class Main {
         // Configura nome do arquivo de banco de dados e le o mesmo
         Arquivo.setArquivo("Banco.txt");
         Arquivo.read(compradores);
-
+        
         // Menu de interacao com o ususario
         do{
             
             System.out.println("Concessionária Santa Rita Imports");
             System.out.println("1 - Fazer uma venda");
             System.out.println("2 - Consultar vendas feitas para um cliente especifico");
-            System.out.println("3 - Verificar total arrecadado em vendas");
+            System.out.println("3 - Mostrar compradores cadastrados");
+            System.out.println("4 - Verificar total arrecadado em vendas");
             System.out.println("0 - Sair");
             
             opcao = input.nextInt();
@@ -45,6 +42,10 @@ public class Main {
                 
                 case 1:
                     ClearScreen.cls();
+                    // Variaveis auxiliares para criacao de compradores
+                    String nome;
+                    String cpf;
+                    int idade;
                     System.out.print("Insira o cpf do comprador: ");
                     input.nextLine(); //limpa buffer
                     cpf = input.nextLine();
@@ -90,6 +91,7 @@ public class Main {
 
                     }
 
+                    Arquivo.save(compradores); // Salva alteracoes no arquivo
                     System.out.println("Venda efetuada com sucesso!");
                     System.out.println("Pressione qualquer coisa para continuar");
                     input.nextLine(); //limpa buffer
@@ -114,8 +116,23 @@ public class Main {
                         ClearScreen.cls();
                     }
                     break;
-
+                
                 case 3:
+                    ClearScreen.cls();
+                    System.out.println("Compradores cadastrados:");
+                    compradores.forEach((chave, valor) -> {
+                        System.out.println("Nome: "+valor.getNome());
+                        System.out.println("CPF: "+valor.getCpf());
+                        System.out.println("Idade: "+valor.getIdade());
+                        System.out.println("///////////////////////////");
+                    });
+                    System.out.println("Pressione qualquer coisa para continuar");
+                    input.nextLine(); //limpa buffer
+                    pause = input.nextLine();
+                    ClearScreen.cls();
+                    break;
+
+                case 4:
                     ClearScreen.cls();
                     System.out.println("O total de carros vendidos foi de: "+Comprador.getCarrosComprados());
                     System.out.println("O total arrecadado com as vendas foi de: "+Comprador.getTotalArrecadado());
@@ -132,7 +149,7 @@ public class Main {
 
         }while(opcao != 0);
 
-        Arquivo.save(compradores);
+        Arquivo.save(compradores); // Salva alteracoes no arquivo
 
         input.close();
     }

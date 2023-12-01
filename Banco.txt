@@ -147,3 +147,26 @@ Ano:2022
 Teto:Teto convencional
 Hibrido:false
 Rodas:Rodas convencionais
+:Comprador
+Nome:Joao
+CPF:9
+Idade:35
+:X6
+Montadora:BMW
+Modelo:BMW X6
+Cor Interior:Preto
+Cilindros:6
+Tipo:Inline
+Potencia:340
+Torque:45.9
+Combustivel:Gasolina
+Velocidade Máxima:250.0
+Tração:AWD - xDrive
+Cor:Azul
+Preço:783000.0
+Chassi:SUV
+Câmbio:Automatico ZF8HP
+Ano:2022
+Teto:Teto Solar
+Hibrido:true
+Rodas:Rodas convencionais
