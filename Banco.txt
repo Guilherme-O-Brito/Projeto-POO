@@ -80,6 +80,25 @@ Ano:2022
 Teto:Teto convencional
 Hibrido:false
 Rodas:Rodas convencionais
+:718
+Montadora:Porsche
+Modelo:718 Spyder
+Cor Interior:Vermelho
+Cilindros:6
+Tipo:Boxter
+Potencia:420
+Torque:43.0
+Combustivel:Gasolina/Etanol
+Velocidade Máxima:300.0
+Tração:Traseira
+Cor:Branco
+Preço:1274000.0
+Chassi:Conversivel
+Câmbio:Automatico PDK
+Ano:2024
+Farol:Farol convencional
+Bancos:Bancos Concha de corrida
+Teto:Teto Solar
 :Comprador
 Nome:Alessandro 
 CPF:2
@@ -147,6 +166,30 @@ Ano:2022
 Teto:Teto convencional
 Hibrido:false
 Rodas:Rodas convencionais
+:Comprador
+Nome:Joao Henrique
+CPF:7
+Idade:35
+:M2
+Montadora:BMW
+Modelo:BMW M2 CS
+Cor Interior:Preto
+Cilindros:6
+Tipo:Inline
+Potencia:450
+Torque:46.5
+Combustivel:Gasolina
+Velocidade Máxima:280.0
+Tração:Traseira
+Cor:Azul
+Preço:865600.0
+Chassi:Coupe
+Câmbio:Manual 6 Marchas
+Ano:2021
+Suspensão:Suspensao coilover de corrida
+Teto:Teto convencional
+Rodas:Rodas Esportivas BMW
+Aerofólio:Aerofolio Esportivo BMW
 :Comprador
 Nome:Joao
 CPF:9
